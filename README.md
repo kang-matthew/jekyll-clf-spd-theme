@@ -1,3 +1,19 @@
+# jekyll-clf-spd-theme
+
+Playing around with Jekyll CLF Theme. Added the following components:
+- Hero - image banner for pages
+- Card - clickable image rectangles with text
+- People Card - to display staff info in a listing of people
+- People Focus Card - to display staff info w/ greater info (biography)
+
+And made some modifications, including but not limited to:
+- Added and set default font to Whitney
+- Added sub-menu hover dropdown to navigation. Needs improvement for mobile.
+- Hardcoded footer w/ SPD, added land acknowledgemnet
+- Hardcoded og-image to SPD
+- Changed the unit background-color
+
+---
 # jekyll-clf-theme
 
 Welcome to your new UBC CS Faculty Jekyll theme! In this directory, you'll find the files you need to be able to package up your theme into a gem. Put your layouts in `_layouts`, your includes in `_includes`, your sass files in `_sass` and any other assets in `assets`.
