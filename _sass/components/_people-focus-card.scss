@@ -1,0 +1,45 @@
+
+
+.spd-people-focus-card {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    gap: 4rem;
+    margin-top: 30px;
+    margin-bottom: 60px;
+    align-items: center;
+}
+
+.spd-people-focus-card > .image-container {
+    height: 200px;
+    width: 200px
+}
+
+.spd-people-focus-card > .image-container > img {
+    height: 100%;
+    object-fit: contain;
+}
+
+.spd-people-focus-card > .text-container {
+    max-width: 650px;
+}
+
+/* For full-view, regardless of page layout being
+    narrow (due to sidenav), do not wrap img and bio */
+@media (min-width: 1200px) {
+    .spd-people-focus-card {
+        flex-wrap: nowrap;
+    }
+}
+
+.spd-people-focus-card > .text-container > .name-pronouns {
+    font-family: 'Whitney';
+    font-weight: bold;
+    font-size: 20px;
+    color: $ubc-blue;
+}
+
+.spd-people-focus-card > .text-container > .biography {
+    margin-top: 12px
+}

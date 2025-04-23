@@ -16,8 +16,13 @@
 @import 'utility';
 @import 'unit';
 @import 'local.clf.fixes';
+@import "fonts";
 
 @import "components/layout";
+@import "components/hero";
+@import "components/card";
+@import "components/people-card";
+@import "components/people-focus-card";
 @import "components/typography";
 @import "components/button";
 @import "components/navbar";

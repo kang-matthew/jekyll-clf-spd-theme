@@ -1,0 +1,27 @@
+.spd-image-card {
+    height: 300px;
+    width: 250px;
+    border-radius: 15px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.spd-image-card:hover {
+    box-shadow:
+        0 8px 16px 0 rgba(0, 0, 0, 0.3),
+        0 12px 40px 0 rgba(0, 0, 0, 0.22);
+    transform: translateY(-2px);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+.spd-image-card-text h2 {
+    color: white;
+    font-weight: bold;
+    margin: 20px;
+}

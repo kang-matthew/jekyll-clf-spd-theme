@@ -1,0 +1,43 @@
+{% assign bg_path = include.background | default: "/assets/img/hero/abby-gregor-hero.jpg" %}
+{% assign h = include.height | default: "300px" %}
+
+<!-- UBC Hero Section -->
+<div id="ubc7-hero" class="row-fluid "
+    style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('{{ bg_path | relative_url }}'); height: {{ h }};">
+    <div class="container">
+        <div class="hero-image">
+            <div class="hero-text">
+                <h1>{{ include.text }}</h1>
+                {% if include.subtext %}
+                <p>{{include.subtext}}</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <!-- <div class="hero-image">
+            <p> Hello World </p>
+        </div> -->
+
+    <!-- <div class="span12"> -->
+    <!-- Mobile Menu Icon -->
+    <!-- <div class="navbar">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target="#ubc7-unit-navigation">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                </div> -->
+    <!-- Read more about Unit Name Treatment on http://brand.ubc.ca/clf -->
+    <!-- No Faculty Treatment --><!--<div id="ubc7-unit-name" class="ubc7-single-element"> -->
+    <!-- <div id="ubc7-unit-name"{% unless site.unit %} class="ubc7-single-element"{% endunless %}>
+                    <a href={{ "/" | relative_url }}> 
+                        {% if site.unit %}
+                        <span id="ubc7-unit-faculty">{{ site.unit }}</span>
+                        {% endif %}
+                        <span id="ubc7-unit-identifier">{{ site.title }}</span>
+
+                    </a>
+                </div> -->
+    <!-- </div> -->
+</div>
+<!-- End of UBC Hero Section -->

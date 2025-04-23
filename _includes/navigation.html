@@ -8,8 +8,21 @@
                     <ul class="nav">
                         {% for item in site.nav %}
                             <li{% if page.url == item.link %} class="active"{% endif %}>
-                                <a href="{{ item.link | relative_url}}">{{ item.name }}</a>
+                                <a class="top-level" href="{{ item.link | relative_url}}">{{ item.name }} {% if item.subnav %} <span class="ubc7-arrow blue down-arrow"></span>{% endif %}</a>
+                                {% if item.subnav %}
+                                    <div class="subnav-dropdown">
+                                    {% for subitem in item.subnav %}
+                                        <a href="{{ subitem.link | relative_url }}">{{ subitem.name }}</a>
+                                    {% endfor %}
+                                    </div>
+                                {% endif %}
                             </li>
+                            <!-- For narrower viewpoints subitems are top-level but indented; hidden in full width -->
+                            {% for subitem in item.subnav %}
+                                <li class="sub-item">
+                                    <a href="{{ subitem.link | relative_url }}">{{ subitem.name }}</a>
+                                </li>
+                            {% endfor %}
                         {% endfor %}
                     </ul>
                 </div><!-- /.nav-collapse -->

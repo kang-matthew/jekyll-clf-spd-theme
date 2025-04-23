@@ -1,0 +1,23 @@
+<!-- Card Component -->
+<!-- 
+    include parameters:
+        - text: text to go in the image
+        - link: what the card should link to
+        - link_absolute: Boolean; whether the link is absolute (for external links)
+        - image_path: path for the background photo of the card
+-->
+{% assign href = "#" %}
+{% if include.link_absolute %}
+    {% assign href = include.link %}
+{% else %}
+    {% assign href = site.baseurl | append: '/' | append: include.link %}
+{% endif %}
+
+<a href="{{ href }}" style="text-decoration: none;">
+    <div class="spd-image-card"
+        style="background-image: linear-gradient(to top, rgba(0, 33, 69, 0.8), rgba(0, 33, 69, 0.2)), url('{{ include.image_path | relative_url }}');">
+        <div class="spd-image-card-text">
+            <h2>{{ include.text }}</h2>
+        </div>
+    </div>
+</a>

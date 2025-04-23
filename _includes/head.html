@@ -72,9 +72,10 @@
     <meta name="og:title" content="{{ site.title }}">
     <meta name="og:url" content="{{ url }}">
     <meta name="og:type" content="article">
-    {% if site.og_image %}
-        <meta name="og:image" content="{{ site.og_image }}">
-    {% endif %}
+
+    {% assign og_image = site.url | append: site.baseurl | append: "/assets/img/SPD-og.jpg" %}
+    <meta name="og:image" content="{{ og_image }}">
+    
     {% if site.facebook_id %}
         <meta name="fb:admins" content="{{ site.facebook_id }}">
     {% endif %}

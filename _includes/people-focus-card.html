@@ -1,0 +1,20 @@
+<!-- People Focus Card Component -->
+<!-- 
+    include parameters:
+        - name: name of the person
+        - pronouns: pronouns of the person (do not surround w parens)
+        - image_path: path for the photo of the person (absolute path)
+        - biography: biography of the person (~50 words is appropriate)
+-->
+
+<div class="spd-people-focus-card">
+    <div class="image-container">
+        <img src="{{ include.image_path | relative_url }}" alt="Photo of {{ include.name }}">
+    </div>
+    <div class="text-container">
+        <span class="name-pronouns">{{ include.name }} ({{ include.pronouns }})</span>
+        <div class="biography">
+            <p>{{ include.biography }}</p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,43 @@
+<!-- People Card Component -->
+<!-- 
+    include parameters:
+        - name: name of the person
+        - pronouns: pronouns of the person (do not surround w parens)
+        - email: email of the person (optional)
+        - image_path: path for the photo of the person (absolute path, optional)
+-->
+
+{% assign path = site.baseurl | append: '/' | append: include.image_path %}
+
+<!-- retrieve initials for a placeholder profile picture -->
+{% assign parts = include.name | split: " " %}
+<!-- accumulator initials is String; initials so far -->
+{% assign initials = "" %}
+{% for part in parts %}
+    {% assign char = part | slice: 0, 1 %}
+    {% assign initials = initials | append: char %}
+{% endfor %}
+
+<div class="spd-people-card">
+    <div class="image-container">
+        {% if include.image_path %}
+            <img src="{{ path }}" alt="Photo of {{ include.name }}">
+        {% else %}
+            <div class="initials-container">
+                <span class="initials">{{ initials }}</span>
+            </div>
+        {% endif %}
+    </div>
+    <div class="text-container">
+        <span class="name-pronouns">{{ include.name }}
+            {% if include.pronouns %}
+            ({{ include.pronouns }})
+            {% endif %}
+        </span>
+        <span class="role">{{ include.role }}</span>
+        {% if include.email %}
+        <span style="font-family: 'Whitney'; font-size: 19px;"><a href="mailto:{{ include.email }}"
+                style="text-decoration: none; color: inherit;">{{include.email}}</a></span>
+        {% endif %}
+    </div>
+</div>

@@ -2,6 +2,63 @@
   padding-left: 0;
 }
 
+
+// Hover dropdown taken from: https://www.w3schools.com/howto/howto_css_dropdown.asp
+
+.subnav-dropdown {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.subnav-dropdown a {
+  color: black;
+  padding: 6px 8px;
+  text-decoration: none;
+  display: block;
+}
+
+li a:hover {
+  background-color: $ubc-blue;
+  color: white;
+}
+
+.top-level {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Gotta do this thing to get the arrow to stick appear
+   vertically centred in a nav item.  */
+.nav .ubc7-arrow {
+  vertical-align: middle;
+  margin-bottom: 2px;
+  margin-left: 3px;
+}
+
+/* For narrow-view, sub-items are exposed but indented */
+.sub-item {
+  display: block;
+  padding-left: 30px;
+}
+
+/* For full-view, sub-items are hidden
+    and hover drop-downs are shown */
+@media (min-width: 980px) {
+
+  .sub-item {
+    display: none;
+  }
+
+  li:hover .subnav-dropdown {
+    display: block;
+  }
+
+}
+
 // .navbar a {
 //   text-decoration: none;
 // }

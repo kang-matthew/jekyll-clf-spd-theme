@@ -4,10 +4,11 @@ layout: default
 
 <div class="row-fluid expand">
     <div class="span3" role="navigation">
-
-      <nav class="side-menu" role="navigation">
-        {% include sub-navigation.html nav=site.nav level=1 %}
-      </nav>
+      {% if page.nav %}
+        <nav class="side-menu" role="navigation">
+          {% include sub-navigation.html nav=page.nav level=1 %}
+        </nav>
+      {% endif %}
 
     </div>
     <div class="span9" role="main">
